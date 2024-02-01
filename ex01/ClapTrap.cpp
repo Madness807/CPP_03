@@ -12,6 +12,11 @@ void ClapTrap::attack(const std::string &target){
 }
 void ClapTrap::takeDamage(unsigned int amount){
 
+	if (amount >= hitPoint){
+		std::cout << name << "\033[33m is dead\033[0m" << std::endl;
+		hitPoint = 0;
+		return;
+	}
 	std::cout << "[ClapTrap] " << name << ": take " << amount <<" damage " << std::endl;
 	hitPoint -= amount;//a revoir
 }
@@ -41,7 +46,6 @@ unsigned int ClapTrap::getHitPoint()
 }
 unsigned int ClapTrap::getAttackDamage()
 {
-	std::cout << "Point d attaque de " << name << " = " << attackDamage << std::endl;
 	return attackDamage;
 }
 
@@ -55,11 +59,11 @@ ClapTrap::ClapTrap(){
 ClapTrap::ClapTrap(std::string name) {
 	this->name = name;
 	hitPoint = 10;
-	energyPoint = 5;
-	attackDamage = 1;
-	std::cout << "Construction de " << this->name << std::endl;
+	energyPoint = 10;
+	attackDamage = 0;
+	std::cout << "\033[32mConstruction [ClapTrap] \033[0m" << name << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Destruction de " << name << std::endl;
+	std::cout << "\033[31mDestruction de [ClapTrap] \033[0m" << name << std::endl;
 }

@@ -3,15 +3,18 @@
 
 #include <iostream>
 #include <string>
+#include "ClapTrap.hpp"
 
-class ScavTrap {
+class ScavTrap : public ClapTrap 
+{
 	public:
 		// Constructeurs && destructeur
 		ScavTrap();
-
+		ScavTrap(std::string name);
 		~ScavTrap();
 
 		// Méthodes
+		void guardGate();
 
 
 	private:

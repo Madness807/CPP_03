@@ -21,11 +21,12 @@ class ClapTrap {
         unsigned int getHitPoint();
         unsigned int getAttackDamage();
 
-    private:
+    protected:
         std::string name;
         unsigned int hitPoint;
         unsigned int energyPoint;
         unsigned int attackDamage;
+        
 };
 
 #endif

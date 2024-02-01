@@ -1,14 +1,16 @@
 #include <iostream>
 #include <string>
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
 	// Declaration
 	std::cout << std::endl;
-	std::cout << "##################################" << std::endl;
+	std::cout << "\033[32m##################################\033[0m" << std::endl;
 	ClapTrap joshep("joshep");
 	ClapTrap samuel("samuel");
+	ScavTrap fred("fred");
 	std::cout << std::endl;
 	std::cout << std::endl;
 
@@ -16,11 +18,12 @@ int main()
 	std::cout << "##################################" << std::endl;
 	joshep.getHitPoint();
 	joshep.getEnergyPoint();
-	joshep.getAttackDamage();
 	std::cout << "----------------------------------" << std::endl;
 	samuel.getHitPoint();
 	samuel.getEnergyPoint();
-	samuel.getAttackDamage();
+	std::cout << "----------------------------------" << std::endl;
+	fred.getHitPoint();
+	fred.getEnergyPoint();
 	std::cout << std::endl;
 	std::cout << std::endl;
 
@@ -28,6 +31,9 @@ int main()
 	std::cout << "##################################" << std::endl;
 	joshep.attack("samuel");
 	samuel.takeDamage(joshep.getAttackDamage());
+	fred.attack("joseph");
+	joshep.takeDamage(fred.getAttackDamage());
+	fred.guardGate();
 	std::cout << std::endl;
 	std::cout << std::endl;
 
@@ -35,15 +41,16 @@ int main()
 	std::cout << "##################################" << std::endl;
 	joshep.getHitPoint();
 	joshep.getEnergyPoint();
-	joshep.getAttackDamage();
 	std::cout << "----------------------------------" << std::endl;
 	samuel.getHitPoint();
 	samuel.getEnergyPoint();
-	samuel.getAttackDamage();
+	std::cout << "----------------------------------" << std::endl;
+	fred.getHitPoint();
+	fred.getEnergyPoint();
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "##################################" << std::endl;
+	std::cout << "\033[31m##################################\033[0m" << std::endl;
 
 
 	return (0);

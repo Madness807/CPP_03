@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-NAME = claptrap
+NAME = ScavTrap
 
 # Compilateur
 CC = c++
