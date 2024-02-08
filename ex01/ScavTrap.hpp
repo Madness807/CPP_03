@@ -7,6 +7,8 @@
 
 class ScavTrap : public ClapTrap 
 {
+	private:
+	
 	public:
 		// Constructeurs && destructeur
 		ScavTrap();
@@ -17,7 +19,6 @@ class ScavTrap : public ClapTrap
 		void guardGate();
 
 
-	private:
 
 };
 

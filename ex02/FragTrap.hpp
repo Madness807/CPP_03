@@ -7,6 +7,8 @@
 
 class FragTrap : public ClapTrap 
 {
+	private:
+	
 	public:
 		// Constructeurs && destructeur
 		FragTrap();
@@ -17,7 +19,6 @@ class FragTrap : public ClapTrap
 		void highFivesGuys();
 
 
-	private:
 
 };
 

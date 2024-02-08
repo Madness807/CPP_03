@@ -5,6 +5,12 @@
 #include <string>
 
 class ClapTrap {
+	private:
+		std::string name;
+		unsigned int hitPoint;
+		unsigned int energyPoint;
+		unsigned int attackDamage;
+		
 	public:
 		// Constructeurs && destructeur
 		ClapTrap();
@@ -21,11 +27,6 @@ class ClapTrap {
 		unsigned int getHitPoint();
 		unsigned int getAttackDamage();
 
-	private:
-		std::string name;
-		unsigned int hitPoint;
-		unsigned int energyPoint;
-		unsigned int attackDamage;
 };
 
 #endif
