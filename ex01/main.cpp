@@ -6,6 +6,8 @@
 int main()
 {
 	// Declaration
+	// ClapTrap toto;
+	// std::cout << pute.getEnergyPoint() << std::endl;
 	std::cout << std::endl;
 	std::cout << "\033[32m##################################\033[0m" << std::endl;
 	ClapTrap joshep("joshep");

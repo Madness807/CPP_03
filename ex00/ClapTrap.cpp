@@ -4,7 +4,7 @@
 void ClapTrap::attack(const std::string &target){
 
 	std::cout << "[ClapTrap] " << name << ": attacks " << target <<", causing " << attackDamage << " points of damage!" << std::endl;
-	if(this->energyPoint == 0){
+	if(this->energyPoint == 0 || this->hitPoint == 0){
 		std::cout << "Do nothing, no energy point" << std::endl;
 		return;
 	}
@@ -55,8 +55,8 @@ ClapTrap::ClapTrap(){
 ClapTrap::ClapTrap(std::string name) {
 	this->name = name;
 	hitPoint = 10;
-	energyPoint = 5;
-	attackDamage = 1;
+	energyPoint = 10;
+	attackDamage = 0;
 	std::cout << "Construction de " << this->name << std::endl;
 }
 

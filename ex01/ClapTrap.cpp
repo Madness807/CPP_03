@@ -3,8 +3,8 @@
 //Methodes//////////////////////////////////////////////////////////////////////
 void ClapTrap::attack(const std::string &target){
 
-	std::cout << "[ClapTrap] " << name << ": attacks " << target <<", causing " << attackDamage << " points of damage!" << std::endl;
-	if(this->energyPoint == 0){
+	std::cout << "[ScavTrap] " << name << ": attacks " << target <<", causing " << attackDamage << " points of damage!" << std::endl;
+	if(this->energyPoint == 0 || this->hitPoint == 0){
 		std::cout << "Do nothing, no energy point" << std::endl;
 		return;
 	}
@@ -31,8 +31,6 @@ void ClapTrap::beRepaired(unsigned int amount){
 	energyPoint--;
 }
 
-
-
 //Getters///////////////////////////////////////////////////////////////////////
 unsigned int ClapTrap::getEnergyPoint()
 {
@@ -49,11 +47,13 @@ unsigned int ClapTrap::getAttackDamage()
 	return attackDamage;
 }
 
-
-
 //Constructeur && Destructeur///////////////////////////////////////////////////
 ClapTrap::ClapTrap(){
 	std::cout << "Activation constructeur" << std::endl;
+	this->name = "default name";
+	hitPoint = 10;
+	energyPoint = 10;
+	attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name) {

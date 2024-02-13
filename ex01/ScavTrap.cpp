@@ -6,7 +6,7 @@ void ScavTrap::guardGate(){
 }
 
 //Constructeur && Desctructeur
-ScavTrap::ScavTrap() : ClapTrap("Default_ScavTrap"){
+ScavTrap::ScavTrap() : ClapTrap(){
 	hitPoint = 100;
 	energyPoint = 50;
 	attackDamage = 20;
@@ -23,4 +23,3 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 ScavTrap::~ScavTrap(){
 	std::cout << "\033[31mDestruction de [ScavTrap] \033[0m" << name << std::endl;
 }
-

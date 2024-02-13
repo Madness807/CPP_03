@@ -7,8 +7,8 @@ int main()
 	// Declaration
 	std::cout << std::endl;
 	std::cout << "##################################" << std::endl;
-	ClapTrap tutu;
-	std::cout << tutu.getEnergyPoint() << std::endl;
+	//ClapTrap tutu;
+	//std::cout << tutu.getEnergyPoint() << std::endl;
 	ClapTrap joshep("joshep");
 	ClapTrap samuel("samuel");
 	std::cout << std::endl;

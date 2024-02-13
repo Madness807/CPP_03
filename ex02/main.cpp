@@ -41,6 +41,8 @@ int main()
 	fred.guardGate();
 	fred.attack("bob");
 	bob.takeDamage(fred.getAttackDamage());
+	bob.highFivesGuys();
+	//joshep.beRepaired(4);
 	std::cout << std::endl;
 	std::cout << std::endl;
 

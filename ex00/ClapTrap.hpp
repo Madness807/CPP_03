@@ -12,9 +12,11 @@ class ClapTrap {
 		unsigned int attackDamage;
 		
 	public:
-		// Constructeurs && destructeur
+		// Constructeurs par defaut
 		ClapTrap();
+		// Constructeur par copie
 		ClapTrap(std::string name);
+		// Desctructeur
 		~ClapTrap();
 
 		// Méthodes

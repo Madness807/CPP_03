@@ -10,15 +10,17 @@ class ScavTrap : public ClapTrap
 	private:
 	
 	public:
-		// Constructeurs && destructeur
+		// Constructeurs
 		ScavTrap();
+
+		// constructeur par copie
 		ScavTrap(std::string name);
+
+		// destructeur
 		~ScavTrap();
 
 		// Méthodes
 		void guardGate();
-
-
 
 };
 
